@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Erik Gartland</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADwklEQVR4nO2bSWwTVxjHf/O8ENsJSewkDabUOCymCUIIWiJRUREJ9UCLxDESYjvAFVpO9NQTRxquHODCpkqVqqJKKaqUVpQDamtFahqcBUslCcRZTYgdx8uYAwpNPZN4wclL7PmdPN+8mff//vM9vzdjj0IOXHx8L51Lu7VGR2u7kq3Nsg3Wa+KZLGeE7o5SSTwTPSNEZqBUkwf93ES2BqVGZo5iqR2lzOJcNUOg3BBQXld/gYWcy74ClHK8+osp+wowDJAtQDaGAbIFyMYwQLYA2RgGyBYgG8MA2QJkU/YGmAs56FnXnwTuPsj7uGqvm9bLZ7K2i03NEPIHeBkc4dXwGInIHIloDGEyYa6wYqurweGux7nzA1wtXqxVjgKyeENBBqwU0fFpBr7vYqy7j7SqvUlNpVRS8QTzMxHCwRFGfu9GEYKGvTtoPnkUi8OWd59rxoAXj3vovdVJaj6e13FpVSXk72PbsU/XrwGjf/TSc+M+6fTqP5oomgGV7noOfnMu7+PmxsP03NRP3lZXw5bD+3Ht2oqtvgaT1UIiGmNuIkz46TAhf4Dw4PA76ZZeAQM//IqaTGnim1p303LqKMLyf4nWKjvWKjvVXjeeIweIjE7y9P5DEFl/BdNFqgHJuXlCfwU08Zqmzew++wWKyD5LOxpd7Dl3vGANUtcBk71B0qqqiW87diin5ItB0Spg9vk4D85fWbbNR5dO4PR53m5HRqc0bYTZRO2iNiuN1CEQfxXVxKwbHQizSROf+CeI/9q9Jc9lcdho+/bLvDVIXgrLfyIv1QC9JWx8JqI7K6wUUtcBjkanJqYmU4QHh3Du2lokZcsj9TvA9aEXRQjNTBD86RG1Pg+K8t/cXtfSxGfXvwYgMRul66uOomiQOgTM9gre2+fTxKf6/iVw52fdKbLoGla8hyxsP36Yse5+zbgf+s3P9MAQW9r24/R5qKjdiLCYSMXizDwLFa3/VV0HALRdvYil0v52295QS8vpz/n7xo+aSWH2+ThPbncWS6Iu0isA3qz71aTKkzudqInkqva9JgwA2PzJHqqb3PR/9wsTvcGclwjCYqbx42Y8Rw4U1O+aMQCgclMd+y60E3kxwVh3P9ODQ0RGJ0lEYqRi85isVsz2DdgbnFS934DT58HV7NXcMeaD8QcJ2QJkYxggW4BsDANkC5CNYYBsAbIxDJAtQDaGAbIFyMYwIJdXy0qVjtZ2xagAyO0Fw1JjIWejAhY+lFMVLM5VLLWjVMnMUTMEStkEvdyMl6dzOcF6NSKXan4NlJwxaBS7JDwAAAAASUVORK5CYII=">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Figtree:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream:          #f7f3ed;
+  --cream-2:        #ede8df;
+  --cream-3:        #e2ddd5;
+  --charcoal:       #2a2f2e;
+  --charcoal-mid:   #4a5250;
+  --charcoal-light: #8a9896;
+  --white:          #ffffff;
+  --seafoam:        #4caf8a;
+  --seafoam-300:    #70c9a8;
+  --seafoam-500:    #2d9e72;
+  --seafoam-600:    #1e845d;
+  --seafoam-l:      #a4dfc8;
+  --seafoam-xl:     #d0f0e3;
+  --steel:          #4a7fa5;
+  --steel-500:      #376690;
+  --steel-l:        #9ec6de;
+  --steel-xl:       #d0e6f2;
+  --coral:          #e8735a;
+  --coral-500:      #d05a40;
+  --coral-l:        #f4b8aa;
+  --coral-xl:       #fef2ef;
+  --f-display: 'Lora', serif;
+  --f-body:    'Figtree', sans-serif;
+  --f-mono:    'Fira Code', monospace;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--f-body); background: var(--cream); color: var(--charcoal); line-height: 1.6; }
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--cream-3);
+  padding: 0 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 56px;
+}
+.nav-name {
+  font-family: var(--f-mono); font-size: 17px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--charcoal); text-decoration: none;
+}
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a {
+  font-family: var(--f-body); font-size: 13px; font-weight: 500;
+  color: var(--charcoal-light); text-decoration: none; transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--seafoam-500); }
+.nav-links a.active { color: var(--charcoal); }
+
+/* ── PAGE ── */
+.page-wrap { max-width: 960px; margin: 0 auto; padding: 0 48px; }
+
+.page-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--cream-3);
+  position: relative;
+}
+.page-header::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 4px; background: var(--seafoam-300);
+}
+.page-header-inner {
+  max-width: 960px; margin: 0 auto;
+  padding: 48px 48px 40px;
+}
+.page-header-eyebrow {
+  font-family: var(--f-mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--seafoam); margin-bottom: 8px;
+}
+.page-header-title {
+  font-family: var(--f-display); font-size: 36px; font-weight: 700;
+  color: var(--charcoal); line-height: 1.15; margin-bottom: 12px;
+}
+.page-header-sub {
+  font-family: var(--f-body); font-size: 16px; color: var(--charcoal-mid);
+  max-width: 560px; line-height: 1.6;
+}
+
+/* ── PUB LIST ── */
+section { padding: 48px 0; border-bottom: 1px solid var(--cream-3); }
+
+.section-heading {
+  font-family: var(--f-display); font-size: 22px; font-weight: 600;
+  color: var(--charcoal); margin-bottom: 28px; padding-bottom: 14px;
+  border-bottom: 1px solid var(--cream-3);
+}
+
+.pub-list { display: flex; flex-direction: column; }
+.pub-item {
+  padding: 24px 0; border-bottom: 1px solid var(--cream-3);
+}
+.pub-item:last-child { border-bottom: none; }
+
+.pub-tag {
+  display: inline-block; font-family: var(--f-mono); font-size: 9px;
+  font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--coral-500); background: var(--coral-l);
+  padding: 2px 8px; border-radius: 3px; margin-bottom: 0;
+}
+.pub-title {
+  font-family: var(--f-display); font-size: 17px; font-weight: 600;
+  color: var(--charcoal); line-height: 1.35; margin-bottom: 6px;
+  text-decoration: none; display: block;
+}
+.pub-title:hover { color: var(--seafoam-500); }
+.pub-outlet {
+  font-family: var(--f-mono); font-size: 11px; font-weight: 400;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--charcoal-light); margin-bottom: 8px;
+}
+.pub-abstract {
+  font-family: var(--f-body); font-size: 15px;
+  color: var(--charcoal-mid); line-height: 1.65;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--white); border-top: 1px solid var(--cream-3);
+  padding: 32px 48px; display: flex; justify-content: space-between; align-items: center;
+}
+.footer-name {
+  font-family: var(--f-mono); font-size: 10px; font-weight: 400;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--charcoal-light);
+}
+
+@media (max-width: 680px) {
+  nav { padding: 0 24px; }
+  .page-header-inner { padding: 32px 24px; }
+  .page-wrap { padding: 0 24px; }
+  footer { flex-direction: column; gap: 8px; padding: 24px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-name" href="index.html">Erik Gartland</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="research.html" class="active">Research</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-header-eyebrow">Publications</p>
+    <h1 class="page-header-title">Research</h1>
+    <p class="page-header-sub">Reports, data analyses, and policy briefs on federal rental assistance, housing affordability, and the barriers that prevent low-income families from accessing stable housing.</p>
+  </div>
+</div>
+
+<div class="page-wrap">
+
+  <section>
+    <h2 class="section-heading">2026</h2>
+    <div class="pub-list">
+
+      <div class="pub-item">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+          <span class="pub-tag">Report</span>
+          <span style="color:var(--cream-3); font-size:12px;">|</span>
+          <span style="font-family:var(--f-mono); font-size:11px; color:var(--charcoal-light);">Apr. 2026</span>
+        </div>
+        <a class="pub-title" href="https://www.cbpp.org/research/housing/nearly-37-million-people-at-risk-of-losing-needed-rental-assistance-to-harsh-time" target="_blank">
+          Nearly 3.7 Million People at Risk of Losing Needed Rental Assistance to Harsh Time Limit and Work Requirement Proposal
+        </a>
+        <p class="pub-outlet">Center on Budget and Policy Priorities</p>
+        <p class="pub-abstract">The Trump Administration has proposed a rule that would put as many as 3.7 million people — more than half of them children — at risk of losing their rental assistance to rigid time limits or stringent work requirements. This report estimates the number of people affected in every state and explains why the policy is both legally dubious and ineffective at promoting economic stability.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-heading">2025</h2>
+    <div class="pub-list">
+
+      <div class="pub-item">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+          <span class="pub-tag">Report</span>
+          <span style="color:var(--cream-3); font-size:12px;">|</span>
+          <span style="font-family:var(--f-mono); font-size:11px; color:var(--charcoal-light);">Dec. 2025</span>
+        </div>
+        <a class="pub-title" href="https://www.cbpp.org/research/housing/administration-plan-targeting-immigrants-would-take-away-rental-assistance-create" target="_blank">
+          Administration Plan Targeting Immigrants Would Take Away Rental Assistance, Create New Barriers
+        </a>
+        <p class="pub-outlet">Center on Budget and Policy Priorities <span style="color:var(--cream-3); margin:0 6px;">|</span><span style="font-family:var(--f-body); text-transform:none; letter-spacing:0; font-size:13px;">With Sonya Acosta</span></p>
+        <p class="pub-abstract">A proposed Trump Administration rule would bar families from receiving rental assistance if any household member is ineligible due to immigration status — ending decades of prorated assistance for mixed-status families. Nearly 80,000 people could lose assistance, and burdensome new documentation requirements could jeopardize housing for hundreds of thousands of U.S. citizens.</p>
+      </div>
+
+      <div class="pub-item">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+          <span class="pub-tag">Report</span>
+          <span style="color:var(--cream-3); font-size:12px;">|</span>
+          <span style="font-family:var(--f-mono); font-size:11px; color:var(--charcoal-light);">Mar. 2025</span>
+        </div>
+        <a class="pub-title" href="https://www.cbpp.org/research/housing/where-households-using-federal-rental-assistance-live" target="_blank">
+          Where Households Using Federal Rental Assistance Live: More Can Be Done to Promote Neighborhood Choice
+        </a>
+        <p class="pub-outlet">Center on Budget and Policy Priorities <span style="color:var(--cream-3); margin:0 6px;">|</span><span style="font-family:var(--f-body); text-transform:none; letter-spacing:0; font-size:13px;">With Alicia Mazzara, Will Fischer, and Nick Kasprak</span></p>
+        <p class="pub-abstract">An analysis of where households receiving federal rental assistance live across the 100 largest metropolitan areas, finding that while programs help people afford housing in a wide range of neighborhoods, many assisted households — particularly in public housing — live in high-poverty areas shaped by a long history of racist housing policies. The report includes interactive maps and policy recommendations to expand neighborhood choice.</p>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <span class="footer-name">Erik Gartland · Housing Policy Researcher</span>
+  <span class="footer-name">Updated May 2026</span>
+</footer>
+
+</body>
+</html>
