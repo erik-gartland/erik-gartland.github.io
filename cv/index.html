@@ -54,6 +54,28 @@ nav {
 footer { background: var(--white); border-top: 1px solid var(--cream-3); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; }
 .footer-name { font-family: var(--f-mono); font-size: 10px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--charcoal-light); }
 .cv-pub-title:hover { color: var(--seafoam-500) !important; }
+.btn-seafoam {
+  font-family: var(--f-body); font-size: 13px; font-weight: 600;
+  padding: 10px 20px; border-radius: 4px; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--seafoam-xl); color: var(--seafoam-600);
+  border: 1px solid var(--seafoam-l); transition: all 0.15s;
+}
+.btn-seafoam:hover { background: var(--seafoam-l); border-color: var(--seafoam-300); color: var(--seafoam-600); }
+.btn-steel {
+  font-family: var(--f-body); font-size: 12px; font-weight: 600;
+  padding: 6px 14px; border-radius: 4px; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--steel-xl); color: var(--steel-500);
+  border: 1px solid var(--steel-l); transition: all 0.15s;
+}
+.btn-steel:hover { background: var(--steel-l); border-color: var(--steel); color: var(--steel-500); }
+.job-title {
+  font-family: var(--f-body); font-size: 15px; font-weight: 400; color: var(--charcoal);
+}
+.job-bullets {
+  font-family: var(--f-body); font-size: 15px; color: var(--charcoal-light); line-height: 1.75; padding-left: 20px;
+}
 .section-heading {
   font-family: var(--f-display);
   font-size: 22px;
@@ -92,8 +114,11 @@ footer { background: var(--white); border-top: 1px solid var(--cream-3); padding
     <h1 class="page-header-title">CV / Resume</h1>
     <p class="page-header-sub">Work experience, research publications, and education.</p>
     <div style="margin-top:20px;">
-      <a href="Gartland_Resume.pdf" download style="font-family:var(--f-body); font-size:13px; font-weight:600; padding:10px 20px; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; background:var(--seafoam-xl); color:var(--seafoam-600); border:1px solid var(--seafoam-l); transition:all 0.15s;">
-        ↓ Download Resume
+      <a href="Gartland_Resume.pdf" download class="btn-seafoam">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3v12"/><path d="m8 11 4 4 4-4"/><path d="M3 15v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4"/>
+        </svg>
+        Download Resume
       </a>
     </div>
   </div>
@@ -103,11 +128,11 @@ footer { background: var(--white); border-top: 1px solid var(--cream-3); padding
 
   <!-- SECTION NAV -->
   <div style="display:flex; gap:10px; flex-wrap:wrap; padding:20px 0; border-bottom:1px solid var(--cream-3); margin-bottom:0;">
-    <a href="#work-experience" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; background:var(--steel-xl); color:var(--steel-500); border:1px solid var(--steel-l); transition:all 0.15s;">Work Experience</a>
-    <a href="#research-cv" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; background:var(--steel-xl); color:var(--steel-500); border:1px solid var(--steel-l); transition:all 0.15s;">Research</a>
-    <a href="#expertise-cv" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; background:var(--steel-xl); color:var(--steel-500); border:1px solid var(--steel-l); transition:all 0.15s;">Expertise</a>
-    <a href="#skills-cv" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; background:var(--steel-xl); color:var(--steel-500); border:1px solid var(--steel-l); transition:all 0.15s;">Skills</a>
-    <a href="#education-cv" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; background:var(--steel-xl); color:var(--steel-500); border:1px solid var(--steel-l); transition:all 0.15s;">Education</a>
+    <a href="#work-experience" class="btn-steel">Work Experience</a>
+    <a href="#research-cv" class="btn-steel">Research</a>
+    <a href="#expertise-cv" class="btn-steel">Expertise</a>
+    <a href="#skills-cv" class="btn-steel">Skills</a>
+    <a href="#education-cv" class="btn-steel">Education</a>
   </div>
 
   <!-- WORK EXPERIENCE -->
@@ -120,14 +145,14 @@ footer { background: var(--white); border-top: 1px solid var(--cream-3); padding
         <span style="font-family:var(--f-mono); font-size:11px; color:var(--charcoal-light); white-space:nowrap;">Washington, DC</span>
       </div>
       <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1px;">
-        <p style="font-family:var(--f-body); font-size:15px; font-weight:700; color:var(--charcoal-light);">Research Analyst</p>
+        <p class="job-title">Research Analyst</p>
         <span style="font-family:var(--f-mono); font-size:11px; color:var(--charcoal-light);">Jun. 2022 – Present</span>
       </div>
       <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:10px;">
-        <p style="font-family:var(--f-body); font-size:15px; font-weight:700; color:var(--charcoal-light);">Research Associate</p>
+        <p class="job-title">Research Associate</p>
         <span style="font-family:var(--f-mono); font-size:11px; color:var(--charcoal-light);">Jun. 2020 – May 2022</span>
       </div>
-      <ul style="font-family:var(--f-body); font-size:15px; color:var(--charcoal-mid); line-height:1.75; padding-left:20px;">
+      <ul class="job-bullets">
         <li style="margin-bottom:6px;">Researching unmet need for federal rental assistance, housing hardship and affordability, and homelessness.</li>
         <li>Analyzing Census microdata and HUD administrative data to support research products across the housing team.</li>
       </ul>
@@ -139,10 +164,10 @@ footer { background: var(--white); border-top: 1px solid var(--cream-3); padding
         <span style="font-family:var(--f-mono); font-size:11px; color:var(--charcoal-light); white-space:nowrap;">Madison, WI</span>
       </div>
       <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:10px;">
-        <p style="font-family:var(--f-body); font-size:15px; font-weight:700; color:var(--charcoal-light);">Data Management Analyst</p>
+        <p class="job-title">Data Management Analyst</p>
         <span style="font-family:var(--f-mono); font-size:11px; color:var(--charcoal-light);">Oct. 2019 – May 2020</span>
       </div>
-      <ul style="font-family:var(--f-body); font-size:15px; color:var(--charcoal-mid); line-height:1.75; padding-left:20px;">
+      <ul class="job-bullets">
         <li style="margin-bottom:6px;">Interviewed subject matter experts on existing data to develop a Department-wide framework to collect an inventory of data.</li>
         <li>Researched other state agencies' data management tools, systems, and processes to document best practices.</li>
       </ul>
@@ -154,10 +179,10 @@ footer { background: var(--white); border-top: 1px solid var(--cream-3); padding
         <span style="font-family:var(--f-mono); font-size:11px; color:var(--charcoal-light); white-space:nowrap;">Madison, WI</span>
       </div>
       <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:10px;">
-        <p style="font-family:var(--f-body); font-size:15px; font-weight:700; color:var(--charcoal-light);">Graduate Researcher</p>
+        <p class="job-title">Graduate Researcher</p>
         <span style="font-family:var(--f-mono); font-size:11px; color:var(--charcoal-light);">Sep. 2018 – Mar. 2019</span>
       </div>
-      <ul style="font-family:var(--f-body); font-size:15px; color:var(--charcoal-mid); line-height:1.75; padding-left:20px;">
+      <ul class="job-bullets">
         <li style="margin-bottom:6px;">Researched the scale and underlying causes of racial disparities in homelessness demographics using HMIS data to assist local service providers and policymakers.</li>
         <li>Developed a report comparing Coordinated Entry Systems across Wisconsin to determine best practices in each Continuum of Care (CoC).</li>
       </ul>
@@ -169,10 +194,10 @@ footer { background: var(--white); border-top: 1px solid var(--cream-3); padding
         <span style="font-family:var(--f-mono); font-size:11px; color:var(--charcoal-light); white-space:nowrap;">Washington, DC</span>
       </div>
       <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:10px;">
-        <p style="font-family:var(--f-body); font-size:15px; font-weight:700; color:var(--charcoal-light);">Management and Policy Analyst Intern</p>
+        <p class="job-title">Management and Policy Analyst Intern</p>
         <span style="font-family:var(--f-mono); font-size:11px; color:var(--charcoal-light);">Jun. 2018 – Aug. 2018</span>
       </div>
-      <ul style="font-family:var(--f-body); font-size:15px; color:var(--charcoal-mid); line-height:1.75; padding-left:20px;">
+      <ul class="job-bullets">
         <li style="margin-bottom:6px;">Conducted interviews with local and state child welfare agencies and transition-age foster youth to assess how Title IV-E federal funding supports extended foster care across states.</li>
         <li>Collaborated on a team of analysts to design a survey sent to states with extended foster care, gathering data on service provision, case management, and federal funding impacts.</li>
       </ul>
@@ -231,7 +256,8 @@ footer { background: var(--white); border-top: 1px solid var(--cream-3); padding
         <ul style="font-family:var(--f-body); font-size:15px; color:var(--charcoal-mid); line-height:1.75; padding-left:20px;">
           <li style="margin-bottom:4px;">HUD administrative data</li>
           <li style="margin-bottom:4px;">Point-in-Time count data</li>
-          <li>American Community Survey microdata</li>
+          <li style="margin-bottom:4px;">American Community Survey microdata</li>
+          <li>American Housing Survey data</li>
         </ul>
       </div>
 
