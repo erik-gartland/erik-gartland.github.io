@@ -454,6 +454,54 @@ footer {
   .contact-grid { grid-template-columns: 1fr; }
   footer { flex-direction: column; gap: 8px; padding: 24px; }
 }
+
+/* ── MOBILE NAV ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--charcoal-light);
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--cream-3);
+  padding: 8px 0;
+  z-index: 99;
+}
+.nav-dropdown.open { display: block; }
+.nav-dropdown a {
+  display: block;
+  font-family: var(--f-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--charcoal-light);
+  text-decoration: none;
+  padding: 10px 24px;
+  transition: color 0.15s;
+}
+.nav-dropdown a:hover { color: var(--seafoam-500); }
+.nav-dropdown a.active { color: var(--charcoal); }
+@media (max-width: 680px) {
+  .nav-hamburger { display: flex; }
+  .nav-links { display: none; }
+}
 </style>
 </head>
 <body>
@@ -468,7 +516,18 @@ footer {
     <li><a href="/cv/">CV</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+
+  <button class="nav-hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="nav-dropdown">
+  <a href="/about/">About</a>
+  <a href="/research/">Research</a>
+  <a href="/media/">Media</a>
+  <a href="/cv/">CV</a>
+  <a href="#contact">Contact</a>
+</div>
 
 <!-- Full-width green bar -->
 <div style="height:4px; background:#70c9a8; width:100%;"></div>
@@ -657,6 +716,15 @@ footer {
   <span class="footer-name">Erik Gartland · Housing Policy Researcher</span>
   <span class="footer-updated">Updated May 2026</span>
 </footer>
+
+
+<script>
+  const hamburger = document.querySelector('.nav-hamburger');
+  const dropdown = document.querySelector('.nav-dropdown');
+  hamburger.addEventListener('click', () => dropdown.classList.toggle('open'));
+  // Close dropdown when a link is clicked
+  dropdown.querySelectorAll('a').forEach(a => a.addEventListener('click', () => dropdown.classList.remove('open')));
+</script>
 
 </body>
 </html>
