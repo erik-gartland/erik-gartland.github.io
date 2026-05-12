@@ -446,13 +446,22 @@ footer {
 /* ── RESPONSIVE ── */
 @media (max-width: 680px) {
   nav { padding: 0 24px; }
-  .hero { padding: 48px 24px 40px; }
-  .hero-name { font-size: 30px; }
+  .hero { padding: 32px 24px 40px; }
+  .hero-name { font-size: 28px; }
   .page-wrap { padding: 0 24px; }
+  section { padding: 40px 0; }
   .research-grid { grid-template-columns: 1fr; }
   .pub-item { grid-template-columns: 1fr; gap: 4px; }
   .contact-grid { grid-template-columns: 1fr; }
+  .contact-btn { width: 100% !important; }
   footer { flex-direction: column; gap: 8px; padding: 24px; }
+
+  /* Hero: stack headshot above name, centered */
+  .hero-top-row { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+  .hero-top-row img { width: 140px; height: 140px; }
+  .hero-top-row > div { padding-top: 0; }
+  .hero-divider { max-width: 100%; }
+  .hero-bio { max-width: 100%; }
 }
 
 /* ── MOBILE NAV ── */
@@ -537,7 +546,7 @@ footer {
   <div class="hero" style="padding-top:40px;">
 
     <!-- Headshot + eyebrow block side by side -->
-    <div style="display:flex; align-items:flex-start; gap:32px; margin-bottom:28px;">
+    <div class="hero-top-row" style="display:flex; align-items:flex-start; gap:32px; margin-bottom:28px;">
 
       <img
         src="Erik_Gartland_Headshot.png"
@@ -697,9 +706,9 @@ footer {
         <div class="contact-block">
           <p class="contact-label" style="margin-bottom:12px;">Find me online</p>
           <div style="display:flex; flex-direction:column; gap:8px;">
-            <a href="https://www.cbpp.org/about/our-staff/erik-gartland" target="_blank" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; background:var(--seafoam-xl); color:var(--seafoam-600); border:1px solid var(--seafoam-l); transition:all 0.15s; width:90px;" class="contact-btn">CBPP</a>
-            <a href="https://www.linkedin.com/in/erik-gartland-05274569/" target="_blank" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; background:var(--seafoam-xl); color:var(--seafoam-600); border:1px solid var(--seafoam-l); transition:all 0.15s; width:90px;" class="contact-btn">LinkedIn</a>
-            <a href="https://github.com/erik-gartland" target="_blank" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; background:var(--seafoam-xl); color:var(--seafoam-600); border:1px solid var(--seafoam-l); transition:all 0.15s; width:90px;" class="contact-btn">GitHub</a>
+            <a href="https://www.cbpp.org/about/our-staff/erik-gartland" target="_blank" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; background:var(--seafoam-xl); color:var(--seafoam-600); border:1px solid var(--seafoam-l); transition:all 0.15s; min-width:90px;" class="contact-btn">CBPP</a>
+            <a href="https://www.linkedin.com/in/erik-gartland-05274569/" target="_blank" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; background:var(--seafoam-xl); color:var(--seafoam-600); border:1px solid var(--seafoam-l); transition:all 0.15s; min-width:90px;" class="contact-btn">LinkedIn</a>
+            <a href="https://github.com/erik-gartland" target="_blank" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; background:var(--seafoam-xl); color:var(--seafoam-600); border:1px solid var(--seafoam-l); transition:all 0.15s; min-width:90px;" class="contact-btn">GitHub</a>
           </div>
         </div>
       </div>
