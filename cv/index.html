@@ -90,8 +90,18 @@ footer { background: var(--white); border-top: 1px solid var(--cream-3); padding
 @media (max-width: 680px) {
   nav { padding: 0 24px; }
   .page-header-inner { padding: 32px 24px; }
-  .page-wrap { padding: 32px 24px; }
+  .page-wrap { padding: 24px 24px; }
   footer { flex-direction: column; gap: 8px; padding: 24px; }
+
+  /* Collapse expertise and skills grids to single column */
+  #expertise-cv .expertise-grid,
+  #skills-cv .skills-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+
+  /* Tighten work experience entries */
+  #work-experience .job-entry { margin-bottom: 24px !important; }
+
+  /* Section nav pills: slightly larger touch targets */
+  .btn-steel { padding: 8px 14px; }
 }
 
 /* ── MOBILE NAV ── */
@@ -304,7 +314,7 @@ footer { background: var(--white); border-top: 1px solid var(--cream-3); padding
   <!-- EXPERTISE -->
   <section id="expertise-cv" style="padding:48px 0; border-bottom:1px solid var(--cream-3);">
     <h2 class="section-heading">Expertise</h2>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px;">
+    <div class="expertise-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:32px;">
 
       <div>
         <p style="font-family:var(--f-mono); font-size:11px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--seafoam); margin-bottom:10px;">Housing Policy</p>
@@ -332,7 +342,7 @@ footer { background: var(--white); border-top: 1px solid var(--cream-3); padding
   <!-- SKILLS -->
   <section id="skills-cv" style="padding:48px 0; border-bottom:1px solid var(--cream-3);">
     <h2 class="section-heading">Skills</h2>
-    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:32px;">
+    <div class="skills-grid" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:32px;">
 
       <div>
         <p style="font-family:var(--f-mono); font-size:11px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--seafoam); margin-bottom:10px;">Programming</p>
