@@ -367,15 +367,17 @@ section {
   margin-bottom: 6px;
   text-decoration: none;
   display: block;
+  transition: color 0.15s;
 }
+.pub-title:hover { color: var(--seafoam-500); }
 
 .see-full-link {
   font-family: var(--f-mono); font-size: 11px; font-weight: 500;
-  color: var(--charcoal) !important; text-decoration: none;
+  color: var(--charcoal-light); text-decoration: none;
   letter-spacing: 0.08em; text-transform: uppercase;
-  transition: color 0.15s;
+  transition: color 0.15s; cursor: pointer; display: inline-block;
 }
-.see-full-link:hover { color: var(--seafoam-500) !important; }
+.see-full-link:hover { color: var(--seafoam-500); }
 
 .pub-outlet {
   font-family: var(--f-mono);
@@ -633,7 +635,7 @@ footer {
       </div>
 
     </div>
-    <div style="padding:16px 0;">
+    <div style="padding:16px 0; border-top:1px solid var(--cream-3);">
       <a href="/research/" class="see-full-link">See full list of publications →</a>
     </div>
   </section>
@@ -690,7 +692,7 @@ footer {
       </div>
 
     </div>
-    <div style="padding:16px 0;">
+    <div style="padding:16px 0; border-top:1px solid var(--cream-3);">
       <a href="/media/" class="see-full-link">See full list of press coverage →</a>
     </div>
   </section>
