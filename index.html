@@ -344,7 +344,8 @@ section {
 .pub-content {}
 
 .pub-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-family: var(--f-mono);
   font-size: 9px;
   font-weight: 500;
@@ -368,7 +369,13 @@ section {
   display: block;
 }
 
-.pub-title:hover { color: var(--seafoam-500); }
+.see-full-link {
+  font-family: var(--f-mono); font-size: 11px; font-weight: 500;
+  color: var(--charcoal); text-decoration: none;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  transition: color 0.15s;
+}
+.see-full-link:hover { color: var(--seafoam-500); }
 
 .pub-outlet {
   font-family: var(--f-mono);
@@ -416,7 +423,6 @@ section {
 }
 
 .contact-btn:hover { background: var(--seafoam-l) !important; }
-.see-more-btn:hover { background: var(--seafoam-l) !important; }
 .contact-value:hover { color: var(--seafoam-500); }
 
 /* ── FOOTER ── */
@@ -453,7 +459,7 @@ footer {
   .research-grid { grid-template-columns: 1fr; }
   .pub-item { grid-template-columns: 1fr; gap: 4px; }
   .contact-grid { grid-template-columns: 1fr; }
-  .contact-btn { width: 100% !important; }
+  .contact-btn { width: 100% !important; align-self: stretch !important; }
   footer { flex-direction: column; gap: 8px; padding: 24px; }
 
   /* Hero: stack headshot above name, centered */
@@ -577,7 +583,7 @@ footer {
 
   <!-- PUBLICATIONS -->
   <section id="publications">
-    <p class="section-eyebrow">Select Publications</p>
+    <p class="section-eyebrow">Selected Publications</p>
     <h2 class="section-heading">Research</h2>
     <div class="pub-list">
 
@@ -628,13 +634,13 @@ footer {
 
     </div>
     <div style="padding:16px 0;">
-      <a href="/research/" style="font-family:var(--f-mono); font-size:11px; font-weight:500; color:var(--seafoam-500); text-decoration:none; letter-spacing:0.08em; text-transform:uppercase;">See full list of publications →</a>
+      <a href="/research/" class="see-full-link">See full list of publications →</a>
     </div>
   </section>
 
   <!-- MEDIA CITATIONS -->
   <section id="media" style="border-top: 1.5px solid var(--cream-3);">
-    <p class="section-eyebrow">Select Citations</p>
+    <p class="section-eyebrow">Selected Citations</p>
     <h2 class="section-heading">Media</h2>
     <div class="pub-list">
 
@@ -685,7 +691,7 @@ footer {
 
     </div>
     <div style="padding:16px 0;">
-      <a href="/media/" style="font-family:var(--f-mono); font-size:11px; font-weight:500; color:var(--seafoam-500); text-decoration:none; letter-spacing:0.08em; text-transform:uppercase;">See full list of press coverage →</a>
+      <a href="/media/" class="see-full-link">See full list of press coverage →</a>
     </div>
   </section>
 
@@ -706,15 +712,15 @@ footer {
         <div class="contact-block">
           <p class="contact-label" style="margin-bottom:12px;">Find me online</p>
           <div style="display:flex; flex-direction:column; gap:8px;">
-            <a href="https://www.cbpp.org/about/our-staff/erik-gartland" target="_blank" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; background:var(--seafoam-xl); color:var(--seafoam-600); border:1px solid var(--seafoam-l); transition:all 0.15s; min-width:90px;" class="contact-btn">CBPP</a>
-            <a href="https://www.linkedin.com/in/erik-gartland-05274569/" target="_blank" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; background:var(--seafoam-xl); color:var(--seafoam-600); border:1px solid var(--seafoam-l); transition:all 0.15s; min-width:90px;" class="contact-btn">LinkedIn</a>
-            <a href="https://github.com/erik-gartland" target="_blank" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; background:var(--seafoam-xl); color:var(--seafoam-600); border:1px solid var(--seafoam-l); transition:all 0.15s; min-width:90px;" class="contact-btn">GitHub</a>
+            <a href="https://www.cbpp.org/about/our-staff/erik-gartland" target="_blank" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; background:var(--seafoam-xl); color:var(--seafoam-600); border:1px solid var(--seafoam-l); transition:all 0.15s; min-width:90px; align-self:flex-start;" class="contact-btn">CBPP</a>
+            <a href="https://www.linkedin.com/in/erik-gartland-05274569/" target="_blank" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; background:var(--seafoam-xl); color:var(--seafoam-600); border:1px solid var(--seafoam-l); transition:all 0.15s; min-width:90px; align-self:flex-start;" class="contact-btn">LinkedIn</a>
+            <a href="https://github.com/erik-gartland" target="_blank" style="font-family:var(--f-body); font-size:12px; font-weight:600; padding:6px 14px; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; background:var(--seafoam-xl); color:var(--seafoam-600); border:1px solid var(--seafoam-l); transition:all 0.15s; min-width:90px; align-self:flex-start;" class="contact-btn">GitHub</a>
           </div>
         </div>
       </div>
       <div>
-        <div style="margin-top:24px; padding:20px; background:var(--cream-3); border-radius:6px; border-left:3px solid var(--steel-500);">
-          <p style="font-family:var(--f-mono); font-size:11px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--steel-500); margin-bottom:6px;">Note</p>
+        <div style="margin-top:24px; padding:20px; background:var(--white); border-radius:6px; border-left:3px solid var(--seafoam-300);">
+          <p style="font-family:var(--f-mono); font-size:11px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--seafoam); margin-bottom:6px;">Note</p>
           <p style="font-family:var(--f-body); font-size:13px; color:var(--charcoal-mid); line-height:1.6;">Views expressed on this site are my own and do not necessarily represent the positions of the Center on Budget and Policy Priorities.</p>
         </div>
       </div>
