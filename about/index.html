@@ -18,7 +18,8 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --cream: #f7f3ed; --cream-2: #ede8df; --cream-3: #e2ddd5;
+  --cream: #f7f3ed; --cream-2: #ebebeb; --cream-3: #e0e0e0;
+  --grey-1: #f4f5f5;
   --charcoal: #2a2f2e; --charcoal-mid: #4a5250; --charcoal-light: #8a9896;
   --white: #ffffff;
   --seafoam: #4caf8a; --seafoam-300: #70c9a8; --seafoam-500: #2d9e72;
@@ -27,17 +28,18 @@
   --f-display: 'Lora', serif; --f-body: 'Figtree', sans-serif; --f-mono: 'Fira Code', monospace;
 }
 html { scroll-behavior: smooth; }
-body { font-family: var(--f-body); background: var(--cream); color: var(--charcoal); line-height: 1.6; }
+body { font-family: var(--f-body); background: var(--white); color: var(--charcoal); line-height: 1.6; }
 nav {
-  position: sticky; top: 0; z-index: 100; background: var(--white);
-  border-bottom: 1px solid var(--cream-3); padding: 0 48px;
+  position: sticky; top: 0; z-index: 100; background: var(--charcoal);
+  padding: 0 48px;
   display: flex; align-items: center; justify-content: space-between; height: 56px;
 }
-.nav-name { font-family: var(--f-mono); font-size: 17px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); text-decoration: none; }
+.nav-name { font-family: var(--f-mono); font-size: 17px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); text-decoration: none; transition: color 0.15s; }
+.nav-name:hover { color: var(--seafoam-300); }
 .nav-links { display: flex; gap: 32px; list-style: none; }
-.nav-links a { font-family: var(--f-body); font-size: 13px; font-weight: 500; color: var(--charcoal-light); text-decoration: none; transition: color 0.15s; }
-.nav-links a:hover { color: var(--seafoam-500); }
-.nav-links a.active { color: var(--charcoal); }
+.nav-links a { font-family: var(--f-body); font-size: 13px; font-weight: 500; color: #b9c2c0; text-decoration: none; transition: color 0.15s; }
+.nav-links a:hover { color: var(--seafoam-300); }
+.nav-links a.active { color: var(--white); }
 .page-header { background: var(--white); border-bottom: 1px solid var(--cream-3); position: relative; }
 .page-header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--seafoam-300); }
 .page-header-inner { max-width: 960px; margin: 0 auto; padding: 48px 48px 40px; }
@@ -51,7 +53,7 @@ nav {
 }
 .placeholder-label { font-family: var(--f-mono); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal-light); margin-bottom: 12px; }
 .placeholder-text { font-family: var(--f-display); font-size: 18px; color: var(--charcoal-light); font-style: italic; }
-footer { background: var(--white); border-top: 1px solid var(--cream-3); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; }
+footer { background: var(--white); border-top: 1px solid #d2d2d2; padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; }
 .footer-name { font-family: var(--f-mono); font-size: 10px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--charcoal-light); }
 @media (max-width: 680px) {
   nav { padding: 0 24px; }
@@ -76,18 +78,17 @@ footer { background: var(--white); border-top: 1px solid var(--cream-3); padding
   display: block;
   width: 22px;
   height: 2px;
-  background: var(--charcoal-light);
+  background: var(--white);
   border-radius: 2px;
   transition: all 0.2s;
 }
 .nav-dropdown {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 56px;
   left: 0;
   right: 0;
-  background: var(--white);
-  border-bottom: 1px solid var(--cream-3);
+  background: #454d4b;
   padding: 8px 0;
   z-index: 99;
 }
@@ -97,13 +98,13 @@ footer { background: var(--white); border-top: 1px solid var(--cream-3); padding
   font-family: var(--f-body);
   font-size: 14px;
   font-weight: 500;
-  color: var(--charcoal-light);
+  color: #b9c2c0;
   text-decoration: none;
   padding: 10px 24px;
   transition: color 0.15s;
 }
-.nav-dropdown a:hover { color: var(--seafoam-500); }
-.nav-dropdown a.active { color: var(--charcoal); }
+.nav-dropdown a:hover { color: var(--seafoam-300); }
+.nav-dropdown a.active { color: var(--white); }
 @media (max-width: 680px) {
   .nav-hamburger { display: flex; }
   .nav-links { display: none; }
