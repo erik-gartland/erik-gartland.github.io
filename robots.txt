@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /interactive-graphics/
+Disallow: /reference-guides/
 
 Sitemap: https://www.erikgartland.com/sitemap.xml
